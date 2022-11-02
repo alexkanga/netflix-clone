@@ -1,46 +1,92 @@
-# Getting Started with Create React App and Redux
+# Netflix clone.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template. Along with other libraries and APIs:
 
-## Available Scripts
+- CSS to give styles to the different components.
 
-In the project directory, you can run:
+- React-slick to implement a responsive carousel slide for movies.
 
-### `npm start`
+- Firebase for authentication API for handling user authentication and hosting.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- TMDB API for movies information and database.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+![Netflix Clone](https://res.cloudinary.com/drpcjt13x/image/upload/v1667406032/Proyectos/Netflix%20clone/Netflix_desktop_lucifer_profile_dq4zhf.jpg "Netflix Clone App")
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## How did I create my Netflix clone app?
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The easiest way to create an App React like this, is by creating a basic React template but adding Redux to the template.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [x] First, you need to have [Node.js](https://nodejs.org/en/) installed in its latest versions.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [x] Then, a package manager, such as [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/). It lets you take advantage of a vast ecosystem of third-party packages, and easily install or update them... you are going to use it a lot!
 
-### `npm run eject`
+- [x] Now, create the React app. On your terminal, run the following command. This will create a new directory (my-app or whatever you want to call it) inside the current folder or your selected folder. Note that Redux must be included in the template so the command will be different than just for a React-only app.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npx create-react-app my-app --template redux
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+... go into your newly generated directory (my-app or whatever you called it)...
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd my-app
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+... and install additional facilities such as:
+
+- [x] [react-slick](https://react-slick.neostack.com/) library. 
+React-Slick is a library to implement slideshow components for cycling through elements—images or slides of text—like a carousel.
+
+npm:
+
+```bash
+npm install react-slick --save
+```
+yarn: 
+
+```bash
+yarn add react-slick
+```
+
+- [x] Then, open this new project in your code editor, if you are using Visual Studio Code (VSC) you can run the following command.
+
+```bash
+code .
+```
+
+- [x] Finally, start up the React app. Run npm start to fire up your application in the development mode. This should automatically open up on [http://localhost:3000](http://localhost:3000) to view your initial app in your browser.
+
+```bash
+npm start
+```
+
+The page will reload when you make changes. You may also see any lint errors in the console.
+
+- [x] Also you have to login to both [Firebase](https://firebase.google.com/) and [TMDB API](https://www.themoviedb.org/) to use their services.
+
 
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+--------------------------------------------------------
+
+You can take a look at this project in my [github](https://github.com/GuaciG/netflix-clone)
+
+Also, it's hosted on Firebase so, you can see the live version in [this link](https://netflix-clone-3709a.web.app/)
+
+
+Feedback issues etc. are more than welcome! Thanks!
+
+
+
+
+
+
+
+
