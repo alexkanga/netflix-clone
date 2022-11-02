@@ -90,8 +90,8 @@
 	background-color: #ccc;
 }
 
-.moreInfo__banner--button span {
-	margin-right: 5px;
+.play {
+	margin-right: 6px;
 	font-size: 1.3rem;
 	font-weight: 500;
 }

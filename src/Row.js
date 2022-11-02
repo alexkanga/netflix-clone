@@ -78,14 +78,18 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 2,
-					initialSlide: 2
+					initialSlide: 2,
+					infinite: true,
+					dots: false
 				}
 			},
 			{
 				breakpoint: 480,
 				settings: {
 					slidesToShow: 2,
-					slidesToScroll: 1
+					slidesToScroll: 2,
+					infinite: true,
+					dots: false
 				}
 			}
 		]

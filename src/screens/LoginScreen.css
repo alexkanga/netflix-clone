@@ -177,4 +177,8 @@
 		max-width: 500px;
 		min-width: 320px;
 	}
+
+	.input___container > input {
+		width: 93%;
+	}
 }

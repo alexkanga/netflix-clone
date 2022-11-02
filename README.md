@@ -10,9 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - TMDB API for movies information and database.
 
-
-![Netflix Clone](https://res.cloudinary.com/drpcjt13x/image/upload/v1667406032/Proyectos/Netflix%20clone/Netflix_desktop_lucifer_profile_dq4zhf.jpg "Netflix Clone App")
-
+![Netflix Clone](https://res.cloudinary.com/drpcjt13x/image/upload/v1667417973/Proyectos/Netflix%20clone/netflix-preview_jccvmk.jpg "Netflix Clone App")
 
 ## How did I create my Netflix clone app?
 
@@ -36,15 +34,16 @@ cd my-app
 
 ... and install additional facilities such as:
 
-- [x] [react-slick](https://react-slick.neostack.com/) library. 
-React-Slick is a library to implement slideshow components for cycling through elements—images or slides of text—like a carousel.
+- [x] [react-slick](https://react-slick.neostack.com/) library.
+      React-Slick is a library to implement slideshow components for cycling through elements—images or slides of text—like a carousel.
 
 npm:
 
 ```bash
 npm install react-slick --save
 ```
-yarn: 
+
+yarn:
 
 ```bash
 yarn add react-slick
@@ -66,27 +65,16 @@ The page will reload when you make changes. You may also see any lint errors in 
 
 - [x] Also you have to login to both [Firebase](https://firebase.google.com/) and [TMDB API](https://www.themoviedb.org/) to use their services.
 
-
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-
---------------------------------------------------------
+---
 
 You can take a look at this project in my [github](https://github.com/GuaciG/netflix-clone)
 
 Also, it's hosted on Firebase so, you can see the live version in [this link](https://netflix-clone-3709a.web.app/)
 
-
 Feedback issues etc. are more than welcome! Thanks!
-
-
-
-
-
-
-
-

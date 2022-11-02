@@ -3,6 +3,8 @@ import "./Banner.css";
 import axios from "./axios";
 import requests from "./Requests";
 import MoreInfoModal from "./MoreInfoModal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 export default function Banner() {
 	const [movie, setMovie] = useState([]);
@@ -52,7 +54,8 @@ export default function Banner() {
 				</h2>
 				<div className="banner__buttons-wrapper">
 					<button className="banner__button">
-						<span>&#9654;</span>Play
+						<FontAwesomeIcon icon={faPlay} className="play" />
+						Play
 					</button>
 					<button
 						className={infoBtnStyles}

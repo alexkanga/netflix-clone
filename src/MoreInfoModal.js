@@ -5,7 +5,8 @@ import {
 	faCheck,
 	faThumbsDown,
 	faThumbsUp,
-	faPlus
+	faPlus,
+	faPlay
 } from "@fortawesome/free-solid-svg-icons";
 
 function MoreInfoModal({ movie, setMovieInfo, setinfoBtnStyles }) {
@@ -60,7 +61,8 @@ function MoreInfoModal({ movie, setMovieInfo, setinfoBtnStyles }) {
 						</h2>
 						<div className="moreInfo__banner--buttons-wrapper">
 							<button className="moreInfo__banner--button">
-								<span>&#9654;</span>Play
+								<FontAwesomeIcon icon={faPlay} className="play" />
+								Play
 							</button>
 							<div className="checked">
 								{!isAdded ? (

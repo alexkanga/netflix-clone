@@ -63,8 +63,8 @@
 	color: #000;
 }
 
-.banner__button span {
-	margin-right: 5px;
+.play {
+	margin-right: 6px;
 	font-size: 1.3rem;
 	font-weight: 500;
 }
