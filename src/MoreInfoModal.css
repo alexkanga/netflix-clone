@@ -1,0 +1,276 @@
+.modal__moreInfo {
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	padding-top: 20px;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal__content {
+	width: 60%;
+	max-height: 100vh;
+	max-width: 1600px;
+	margin: 0 auto;
+	background-color: #111;
+	padding-bottom: 40px;
+	border-radius: 10px;
+}
+
+.modal__content--banner {
+	height: 55vh;
+	position: relative;
+	border-radius: 10px 10px 0 0;
+}
+
+.moreInfo__banner-close {
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+	background-color: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 24px;
+}
+
+.modal__content--InfoMovie {
+	width: 90%;
+	position: absolute;
+	bottom: 70px;
+	left: 50px;
+}
+
+.moreInfo__banner--title {
+	font-size: 3rem;
+	font-weight: 800;
+	padding-bottom: 0.3rem;
+	width: 45rem;
+	line-height: 1;
+}
+
+.moreInfo__banner--buttons-wrapper {
+	color: #fff;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.moreInfo__banner--button {
+	cursor: pointer;
+	outline: none;
+	border: none;
+	font-size: 1rem;
+	font-weight: 500;
+	border-radius: 4px;
+	padding: 0.5vh 2.9vw;
+	margin-right: 0.8rem;
+	margin-top: 0.5rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	line-height: 1;
+	font-family: "Roboto", sans-serif;
+	height: 40px;
+	width: 170px;
+	background-color: #fff;
+	color: #000;
+}
+
+.moreInfo__banner--button:hover {
+	background-color: #ccc;
+}
+
+.moreInfo__banner--button span {
+	margin-right: 5px;
+	font-size: 1.3rem;
+	font-weight: 500;
+}
+
+.checked,
+.like {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 20px;
+	width: 35px;
+	height: 35px;
+	background-color: rgba(17, 17, 17, 0.4);
+	color: #fff;
+	border: 2px solid #999;
+	margin-top: 0.5rem;
+	margin-right: 0.8rem;
+	cursor: pointer;
+}
+
+.checked {
+	position: relative;
+}
+
+.checked:hover,
+.like:hover {
+	border: 2px solid #fff;
+}
+
+.tooltiptext {
+	font-size: 1rem;
+	visibility: hidden;
+	width: 140px;
+	background-color: rgb(221, 221, 221);
+	color: #000;
+	text-align: center;
+	border-radius: 4px;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 1;
+	top: -45px;
+	left: -53px;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #dddddd transparent transparent transparent;
+}
+
+.checked:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
+}
+
+.remove {
+	width: 190px;
+	left: -78px;
+}
+
+.moreInfo__banner--fadeBotton {
+	height: 4rem;
+	background-image: linear-gradient(
+		180deg,
+		transparent,
+		rgba(37, 37, 37, 0.6),
+		#111
+	);
+	position: relative;
+	top: -60px;
+}
+
+.moreInfo__banner--extraInfo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	top: -90px;
+	width: 90%;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+.moreInfo__banner-extraLeft {
+	width: 70%;
+	margin-right: 30px;
+	padding-top: 30px;
+}
+
+.moreInfo__banner--year {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 500;
+	margin: 13px 0;
+}
+
+.moreInfo__banner--year span {
+	color: #46d369;
+	margin-right: 10px;
+	font-weight: 600;
+}
+
+.moreInfo__banner--year .ageRange {
+	color: #fff;
+	font-size: 0.7rem;
+	padding: 5px;
+	background-color: #e50914;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	margin-left: 10px;
+}
+
+.moreInfo__banner--description {
+	font-size: 0.9rem;
+	line-height: 24px;
+	font-weight: 600;
+}
+
+.moreInfo__banner-extraRight {
+	width: 30%;
+	margin-left: 20px;
+	padding-top: 20px;
+}
+
+.extraRight {
+	font-size: 14px;
+	line-height: 20px;
+	margin: 0.5em 0.5em 0 0;
+	color: #fff;
+}
+
+.extraRight span {
+	color: #777;
+}
+
+@media only screen and (max-width: 500px) {
+	.modal__content {
+		width: 90%;
+	}
+
+	.modal__content--InfoMovie {
+		width: 80%;
+		bottom: 50px;
+		left: 30px;
+	}
+
+	.moreInfo__banner--title {
+		font-size: 2.8rem;
+		width: 100%;
+	}
+
+	.moreInfo__banner--extraInfo {
+		flex-direction: column;
+		width: 90%;
+		padding: 0 10px;
+	}
+
+	.moreInfo__banner-extraLeft {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.moreInfo__banner-extraRight {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.extraRight {
+		margin: 0.5em 0 0 0;
+	}
+}

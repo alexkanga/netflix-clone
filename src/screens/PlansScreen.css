@@ -1,0 +1,36 @@
+.plansScreen__plan {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	opacity: 0.8;
+}
+
+.plansScreen__info {
+	font-family: Netflix Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.plansScreen__plan:hover {
+	opacity: 1;
+}
+
+.plansScreen__plan > button {
+	font-family: Netflix Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+	padding: 10px 20px;
+	font-size: 1rem;
+	color: #fff;
+	background-color: #e50914;
+	font-weight: 500;
+	border: none;
+	cursor: pointer;
+}
+
+.plansScreen__plan--selected {
+	background-color: gray !important;
+	padding: 10px 25px;
+}
+
+/*
+.plansScreen__plan--disabled > button {
+	background-color: gray !important;
+}
+*/

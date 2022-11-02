@@ -1,0 +1,97 @@
+.row {
+	color: #fff;
+	position: relative;
+	top: -150px;
+	overflow: hidden;
+}
+
+.row h2 {
+	font-size: 1.3rem;
+	margin-left: 4.5%;
+}
+
+/* Main container for carousel */
+.slick-slider {
+	overflow: visible !important;
+}
+
+/* Container after arrows containing images */
+.slick-list {
+	left: 4%;
+	overflow: visible !important;
+}
+
+/* Container independent for each image */
+.slick-slide {
+	padding: 20px 0;
+}
+
+/* div inside slick-slide for image */
+.slick-slide > div {
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 5px;
+}
+
+.slick-slide > div > img {
+	border-radius: 3px;
+	transition: transform 450ms;
+}
+
+.slick-slide > div > img:hover {
+	transform: scale(1.09);
+	opacity: 1;
+	cursor: pointer;
+}
+
+/* first and last image of carousel */
+.slick-disabled {
+	opacity: 0 !important;
+}
+
+/* Styling arrows for carousel */
+.slick-prev,
+.slick-next {
+	color: #fff !important;
+	background-color: rgba(34, 34, 34, 0.5) !important;
+	font-size: 3vw !important;
+	height: 40% !important;
+	width: 5% !important;
+	min-width: 50px !important;
+	position: absolute !important;
+	bottom: 0% !important;
+	margin: 0;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	cursor: pointer;
+	z-index: 99;
+	opacity: 0;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+	opacity: 1;
+}
+
+.slick-prev {
+	left: -8px !important;
+}
+
+.slick-next {
+	right: 0 !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+	content: "" !important;
+}
+
+@media only screen and (max-width: 500px) {
+	.slick-prev,
+	.slick-next {
+		font-size: 6vw !important;
+	}
+}

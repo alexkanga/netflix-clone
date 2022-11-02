@@ -1,0 +1,367 @@
+.nav {
+	position: fixed;
+	top: 0;
+	padding: 20px 0;
+	width: 100%;
+	height: 30px;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* Animations */
+	transition-timing-function: ease-in;
+	transition: all 0.5s;
+	background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.3) 50%);
+}
+
+.nav__black {
+	background-color: #111;
+}
+
+.nav__content {
+	position: relative;
+	width: 90%;
+	height: 100%;
+}
+
+.nav__logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 95px;
+	height: 100%;
+	object-fit: contain;
+	cursor: pointer;
+}
+
+.nav__menu {
+	position: absolute;
+	left: 120px;
+	top: 0;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu__dropdown {
+	display: none;
+}
+
+.menu-content {
+	list-style-type: none;
+	padding: 0;
+}
+
+.menu-content > li {
+	display: inline-block;
+	margin: 0 12px;
+	color: #f0f0f0;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.nav__menu > ul > li:hover {
+	opacity: 0.8;
+}
+
+.action__buttons {
+	position: absolute;
+	right: 0;
+	height: 100%;
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.bellIcon {
+	position: absolute;
+	right: 80px;
+	color: #f0f0f0;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.bellIcon:hover,
+.nav__content > h6:hover,
+.magnifying-glass:hover {
+	opacity: 0.8;
+}
+
+.kids-link {
+	position: absolute;
+	right: 125px;
+	color: #f0f0f0;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.magnifying-glass {
+	position: absolute;
+	right: 180px;
+	color: #f0f0f0;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.profile-action {
+	position: absolute;
+	right: 0;
+	width: 52px;
+	height: 100%;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav__avatar {
+	position: absolute;
+	right: 20px;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+.profile-action > span {
+	position: absolute;
+	right: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #fff;
+	cursor: pointer;
+	transition: transform 0.4s;
+}
+
+.profile-action:hover span {
+	transform: rotate(180deg);
+}
+
+.profileDropdown__menu {
+	padding: 20px 0 0 0;
+	width: 200px;
+	display: flex;
+	transition: display 3s;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	right: 65px;
+	top: 51px;
+	border-bottom: 0.5px solid grey;
+	cursor: pointer;
+}
+
+.profileDropdown__menu::before {
+	content: "";
+	position: fixed;
+	right: 100px;
+	top: 64px;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #fff;
+	transform: rotate(180deg);
+	cursor: pointer;
+}
+
+.profileDropdown__content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	cursor: pointer;
+}
+
+.profileDropdown__row {
+	width: 100%;
+	height: 44px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 1px 0;
+	border-left: 0.5px solid grey;
+	border-right: 0.5px solid grey;
+	cursor: pointer;
+}
+
+.profileDropdown__row:first-child {
+	border-top: 0.5px solid grey;
+	padding-top: 5px;
+}
+
+.profileDropdown__row--wrapperImg {
+	width: 32px;
+	height: 32px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 10px;
+	cursor: pointer;
+}
+
+.profileDropdown__row img {
+	width: 100%;
+	height: auto;
+	border-radius: 4px;
+	margin: 0 auto;
+}
+
+.profileDropdown__row .profileIcon {
+	width: 25px;
+	height: 25px;
+	margin-right: 10px;
+}
+
+.profileDropdown__menu h6 {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.profileDropdown__row--logOut {
+	width: 100%;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1px 0;
+	border-top: 1px solid grey;
+	border-left: 0.5px solid grey;
+	border-right: 0.5px solid grey;
+	cursor: pointer;
+}
+
+.profileDropdown__menu .profileDropdown__row:hover,
+.profileDropdown__menu .profileDropdown__row--logOut:hover {
+	text-decoration: underline;
+}
+
+@media only screen and (max-width: 866px) {
+	.nav__menu > ul > li {
+		display: none;
+	}
+
+	.menu__dropdown {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		left: 0;
+		cursor: pointer;
+		width: 100px;
+		height: 65px;
+	}
+
+	.menu__dropdown > h4 {
+		color: #fff;
+		cursor: pointer;
+		font-size: 0.8rem;
+		font-weight: 600;
+		position: relative;
+	}
+
+	.menu__dropdown > h4::after {
+		content: "";
+		position: absolute;
+		left: 55px;
+		top: 6px;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-top: 6px solid #fff;
+		cursor: pointer;
+		transition: transform 0.4s;
+	}
+
+	.menu__dropdown-responsiveMenu {
+		width: 290px;
+		display: flex;
+		transition: display 3s;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		left: 0;
+		top: 73px;
+		border-top: 2px solid grey;
+		cursor: pointer;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	.menu__dropdown-responsiveMenu::before {
+		content: "";
+		position: fixed;
+		left: 150px;
+		top: 67px;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-top: 6px solid #fff;
+		transform: rotate(180deg);
+		cursor: pointer;
+	}
+
+	.menu__dropdown-content {
+		width: 100%;
+	}
+
+	.menu__dropdown-content > ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		width: 100%;
+		list-style: none;
+	}
+	.menu__dropdown-content > ul > li {
+		width: 100%;
+		text-align: center;
+		padding: 20px 0;
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: #fff;
+	}
+
+	.menu__dropdown-content > ul > li:hover {
+		background-color: rgba(177, 177, 177, 0.2);
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.nav__logo {
+		width: 60px;
+	}
+
+	.nav__menu {
+		left: 80px;
+	}
+
+	.magnifying-glass {
+		display: none;
+	}
+
+	.kids-link {
+		display: none;
+	}
+
+	.nav__avatar {
+		right: 0;
+	}
+
+	.profile-action > span {
+		display: none;
+	}
+
+	.bellIcon {
+		right: 50px;
+	}
+
+	.profileDropdown__menu {
+		right: 21px;
+	}
+
+	.profileDropdown__menu::before {
+		right: 25px;
+	}
+}
