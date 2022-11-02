@@ -63,3 +63,28 @@
 	border: none;
 	cursor: pointer;
 }
+
+@media only screen and (max-width: 500px) {
+	.profileScreen__body {
+		width: 90%;
+		padding-top: 30%;
+	}
+
+	.profileScreen__body > h1 {
+		font-size: 35px;
+	}
+
+	.profileScreen__info {
+		flex-direction: column;
+	}
+
+	.profileScreen__info > img {
+		height: 80px;
+		width: 80px;
+	}
+
+	.profileScreen__details {
+		margin-top: 25px;
+		margin-left: 0;
+	}
+}

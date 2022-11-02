@@ -119,3 +119,27 @@
 	color: #fff;
 	border: 1px solid #fff;
 }
+
+@media only screen and (max-width: 500px) {
+	.addProfileScreen__logo {
+		padding-left: 30px;
+	}
+
+	.list-profiles h1 {
+		font-size: 5vw;
+	}
+
+	.choose-profile {
+		margin: 1em auto 1em auto;
+	}
+
+	.addProfileScreen__ProfilesAdmin {
+		margin-top: 0;
+		padding: 20px 0;
+	}
+
+	.addProfileScreen__ProfilesAdmin .buttonAdmin {
+		font-size: 2vw;
+		width: 140px;
+	}
+}

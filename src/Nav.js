@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectUser } from "./features/userSlice";
@@ -12,30 +12,56 @@ import helpIcon from "./img/help1.png";
 import "./Nav.css";
 
 export default function Nav() {
+	/* Hooks for states */
 	const [show, handleShow] = useState(false);
 	const [dropdownMenu, setDropdownMenu] = useState(false);
-	const [isHoveringMenu, setIsHoveringMenu] = useState(false);
+	const [isHoveringProfile, setIsHoveringProfile] = useState(false);
 	const [dropdownProfile, setDropdownProfile] = useState(false);
 
+	/* Get current user from Redux */
 	const user = useSelector(selectUser);
+
+	/* Navigate to specific route with react-router */
 	const history = useHistory();
 
+	/* Turn into black color Navbar background when scroll down*/
 	const transitionNavBar = () => {
 		window.scrollY > 100 ? handleShow(true) : handleShow(false);
-	};
-
-	const handleMouseEnter = () => {
-		setIsHoveringMenu(true);
-	};
-
-	const handleMouseLeave = () => {
-		setIsHoveringMenu(false);
 	};
 
 	useEffect(() => {
 		window.addEventListener("scroll", transitionNavBar);
 		return () => window.removeEventListener("scroll", transitionNavBar);
 	}, []);
+
+	/* show and hide dropdown Profile when hover */
+	const handleMouseEnter = () => {
+		setIsHoveringProfile(true);
+	};
+
+	const handleMouseLeave = () => {
+		setIsHoveringProfile(false);
+	};
+
+	/* Clicking outside of box, you close dropdownProfile */
+	const dropdownProfileRef = useRef(null);
+
+	function useOutsideHider(ref) {
+		useEffect(() => {
+			function handleClickOutside(event) {
+				if (ref.current && !ref.current.contains(event.target)) {
+					setDropdownProfile(false);
+				}
+			}
+
+			document.addEventListener("mousedown", handleClickOutside);
+			return () => {
+				document.removeEventListener("mousedown", handleClickOutside);
+			};
+		}, [ref]);
+	}
+
+	useOutsideHider(dropdownProfileRef);
 
 	return (
 		<div className={`nav ${show && "nav__black"}`}>
@@ -93,8 +119,8 @@ export default function Nav() {
 							onClick={() => setDropdownProfile(!dropdownProfile)}
 						/>
 						<span></span>
-						{(dropdownProfile || isHoveringMenu) && (
-							<div className="profileDropdown__menu">
+						{(dropdownProfile || isHoveringProfile) && (
+							<div className="profileDropdown__menu" ref={dropdownProfileRef}>
 								<div className="profileDropdown__content">
 									<div
 										className="profileDropdown__row"
