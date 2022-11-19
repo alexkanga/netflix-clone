@@ -5,8 +5,12 @@ import requests from "./Requests";
 import MoreInfoModal from "./MoreInfoModal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { useHistory } from "react-router-dom";
 
 export default function Banner() {
+	/* Navigate to specific route with react-router */
+	const history = useHistory();
+
 	const [movie, setMovie] = useState([]);
 	const [movieInfo, setMovieInfo] = useState(false);
 	const [infoBtnStyles, setinfoBtnStyles] = useState("banner__button-moreInfo");
@@ -25,7 +29,7 @@ export default function Banner() {
 		fetchData();
 	}, []);
 
-	console.log(movie);
+	//console.log(movie);
 
 	function truncate(string, n) {
 		return string?.length > n ? string.substr(0, n - 1) + "..." : string;
@@ -53,7 +57,10 @@ export default function Banner() {
 					{truncate(movie?.overview, 170)}
 				</h2>
 				<div className="banner__buttons-wrapper">
-					<button className="banner__button">
+					<button
+						className="banner__button"
+						onClick={() => history.push("/watch")}
+					>
 						<FontAwesomeIcon icon={faPlay} className="play" />
 						Play
 					</button>

@@ -8,6 +8,7 @@ import LoginScreen from "./screens/LoginScreen";
 import HomeScreen from "./screens/HomeScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import AddProfileScreen from "./screens/AddProfileScreen";
+import WatchScreen from "./screens/WatchScreen";
 
 export default function App() {
 	const user = useSelector(selectUser);
@@ -46,6 +47,9 @@ export default function App() {
 						</Route>
 						<Route path="/profile">
 							<ProfileScreen />
+						</Route>
+						<Route path="/watch">
+							<WatchScreen />
 						</Route>
 						<Route exact path="/">
 							<HomeScreen />

@@ -8,8 +8,11 @@ import {
 	faPlus,
 	faPlay
 } from "@fortawesome/free-solid-svg-icons";
+import { useHistory } from "react-router-dom";
 
 function MoreInfoModal({ movie, setMovieInfo, setinfoBtnStyles }) {
+	const history = useHistory();
+
 	const [isLiked, setLike] = useState(false);
 	const [isAdded, updateAdded] = useState(false);
 
@@ -60,7 +63,10 @@ function MoreInfoModal({ movie, setMovieInfo, setinfoBtnStyles }) {
 							{movie?.title || movie?.name || movie?.original_name}
 						</h2>
 						<div className="moreInfo__banner--buttons-wrapper">
-							<button className="moreInfo__banner--button">
+							<button
+								className="moreInfo__banner--button"
+								onClick={() => history.push("/watch")}
+							>
 								<FontAwesomeIcon icon={faPlay} className="play" />
 								Play
 							</button>
