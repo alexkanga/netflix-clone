@@ -10,6 +10,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - TMDB API for movies information and database.
 
+## How to use the app?
+
+- [x] In order to enter the application, type your **email address** and click on **'Get Started'**.
+- [x] If it's your **first time**, you must register with both **email address** and **password**. Then, you can login and logout at any time.
+
 ![Netflix Clone](https://res.cloudinary.com/drpcjt13x/image/upload/v1667417973/Proyectos/Netflix%20clone/netflix-preview_jccvmk.jpg "Netflix Clone App")
 
 ## How did I create my Netflix clone app?
